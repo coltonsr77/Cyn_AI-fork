@@ -1,7 +1,9 @@
-I wrote this program in Visual Studio Code, so I don't know if it'll work elsewhere. This program will listen to your selected microphone, transcribe the audio, and feed it to an AI model that will impersonate Cyn from Murder drones, but you need to do a few things first. 
-First, you need to run Microphone_index.py to find your selected microphone's index. Then, you edit line 78 of Cyn_AI.py in your Visual Studio Code file. You edit: def recognize_speech(device_index=1)
-My microphone's index number is 1, so that's what it is set to. After you run Microphone_index.py, look through the different devices. (make sure the device you're using is properly connected) Look for the index number of your selected microphone, and change the device
-index in the code from 1 to whatever the index of your microphone is. And those are all the instructions for the microphone and voice recognition. Now, onto the AI part. You'll need to install a program called "LM Studio"
-In LM studio, you'll need to load the AI model. I'd reccomend "lmstudio-community/Mistral-Nemo-Instruct-2407-GGUF" if your machine is strong enough. The URL in the program should automatically be correct, so don't worry about that unless you know it's different. For the 
-model I use, I set the context length to 10000 tokens, the GPU offload to 30/40, and the CPU thread pool size to 3. I belive that's about it! Oh and by the way, feel free to edit the prompt for the AI however you want. Just make sure that you keep the prompt
-inside the 3 single quotes to avoid any bugs.  Good luck!
+I wrote this program in VS Code, so I don't know if it'll work elsewhere. This program will wait for the wake words "Cyn" or "Hey Cyn", take a picture, and compare the face(s) in the frame to the one(s) in the FRS (Facial Recognition System). Plus, If you name the file 
+image(s) of the face(s) as the name of the person and make it a jpg or a png, Cyn will use the file name as the name for the person who's face is in the picture. It'll also listen to your selected microphone, use Google STT and Whisper TOGETHER for a super accurate voice 
+transcription, and send the text to an AI model that will impersonate Cyn in it's response. However, there's things you need to do first. Go read requirements.txt for well...the requirements. But that's not all. You need to use Microphone_index.py to find the index for 
+your selected microphone, and change MICROPHONE_INDEX (line 63) to the index of your microphone (or set it to None if you're not sure). You'll also need to use webcam_index_tester.py to find the index of your selected webcam, and change the integer to the index of your 
+webcam (line 226). Once you have both of those, you'll need to make a folder to put your different things in. The folder can be named whatever you want it to be named, but here's what you need to make/put in it:
+1. Cyn_AI.py (obviously)
+2. cyn_system_prompt.txt
+3. cyn_memory.json
+4. A picture/multiple pictures of faces you want to add to the FRS named something like Jacob.png or Abby.jpg
