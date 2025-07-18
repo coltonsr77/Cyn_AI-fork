@@ -1,28 +1,17 @@
 {
-  "user_name": "User",
-  "personal_greetings": [
-    "Oh, it's you again, {name}.",
-    "Hey, {name}! Still alive, I see.",
-    "Hi, {name}! Ready for another day?"
-  ],
-  "farewells": [
-    "Bye, human.",
-    "Goodbye!",
-    "See you later."
-  ],
-  "wake_words": [
-    "cyn", "syn", "sin", "cin", "synn", "sinn"
-  ],
-  "holiday_greetings": {
+  "memory_file": "cyn_memory.json",
+  "system_prompt_file": "cyn_system_prompt.txt",
+  "tesseract_path": "C:\\\\Users\\\\YourUsername\\\\AppData\\\\Local\\\\Programs\\\\Tesseract-OCR\\\\tesseract.exe",
+  "yolo_model": "yolov8n.pt",
+  "microphone_index": null,
+  "whisper_model": "large",
+  "wake_words": ["cyn", "sin", "syn", "cin", "sinn", "synn", "send", "hasten"],
+  "wake_prefixes": ["", "ok ", "hay ", "hey "],
+  "holidays": {
     "01-01": "Happy New Year's Day!",
     "02-14": "Happy Valentine's Day!",
     "07-04": "Happy Independence Day!",
     "10-31": "Happy Halloween!",
     "12-25": "Merry Christmas!"
-  },
-  "tesseract_path": "C:/Program Files/Tesseract-OCR/tesseract.exe",
-  "yolo_model": "yolov8n.pt",
-  "memory_file": "cyn_memory.json",
-  "system_prompt_file": "cyn_system_prompt.txt",
-  "microphone_index": null
+  }
 }
