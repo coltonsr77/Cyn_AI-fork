@@ -5,7 +5,7 @@ your selected microphone, and change MICROPHONE_INDEX (line 63) to the index of 
 webcam (line 226). Once you have both of those, you'll need to make a folder to put your different things in. The folder can be named whatever you want it to be named, but here's what you need to make/put in it:
 1. Cyn_AI.py (obviously)
 2. cyn_system_prompt.txt
-3. cyn_memory.json
+3. cyn_memory.json (Don't mind the last few things I put in the memory file, my AI kept glitching)
 4. config.json
 5. A picture/multiple pictures of faces you want to add to the FRS named something like Jacob.png or Abby.jpg
 
