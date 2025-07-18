@@ -1,4 +1,6 @@
-# Core functionality
+# ============================
+# Core Functionality
+# ============================
 requests
 speechrecognition
 pytesseract
@@ -8,40 +10,56 @@ face-recognition
 face-recognition-models
 openai-whisper
 
-# Whisper / Torch dependencies
-torch
-torchaudio
+# ============================
+# Whisper / Torch Dependencies
+# (Pinned for stability)
+# ============================
+torch>=2.3.1
+torchaudio>=2.3.1
 tqdm
 numba
 llvmlite
 more-itertools
 
-# Image processing
+# ============================
+# Image Processing
+# ============================
 numpy
 Pillow
 
+# ============================
 # Audio / Speech
+# ============================
 pyaudio
 webrtcvad
 
-# General utilities (some are installed automatically but good to include)
+# ============================
+# General Utilities
+# (Some auto-installed but included for safety)
+# ============================
 setuptools
 wheel
 typing-extensions
 packaging
 
-# YOLO / Ultralytics extras
+# ============================
+# YOLO / Ultralytics Extras
+# ============================
 matplotlib
 seaborn
 scipy
 psutil
 pyyaml
 
-# Other libraries used internally by face_recognition / dlib
+# ============================
+# Face Recognition / Dlib Dependencies
+# ============================
 dlib
 click
 
-# For Tesseract OCR (Python wrapper only, Tesseract EXE installed separately)
-
-#Save the below as requirements.txt and run:
-pip install -r requirements.txt
+# ============================
+# Notes:
+# 1) Tesseract EXE must be installed separately on your system.
+# 2) Run installation with:
+#    pip install -r requirements.txt
+# ============================
