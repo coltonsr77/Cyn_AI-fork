@@ -22,13 +22,14 @@ import whisper
 # ==============================
 # LOAD CONFIG
 # ==============================
-with open("config.json", "r", encoding="utf-8") as f:
+with open("config.json", "r") as f:
     CONFIG = json.load(f)
 
+WAKE_WORDS = CONFIG.get("wake_words", [])
+WAKE_PREFIXES = CONFIG.get("wake_prefixes", ["", "ok ", "hay ", "hey "])
 USER_NAME = CONFIG["user_name"]
 PERSONAL_GREETINGS = CONFIG["personal_greetings"]
 FAREWELLS = CONFIG["farewells"]
-WAKE_WORDS = CONFIG["wake_words"]
 HOLIDAYS = CONFIG["holiday_greetings"]
 
 pytesseract.pytesseract.tesseract_cmd = CONFIG["tesseract_path"]
@@ -299,9 +300,9 @@ def recognize_face_greeting():
 # TEXT / WAKEWORD
 # ==============================
 def precise_wakeword_detected(text):
-    prefixes = ["", "hey ", "hi ", "okay "]
-    wake_phrases = [prefix + word for prefix in prefixes for word in WAKE_WORDS]
-    text = text.lower().strip().translate(str.maketrans("", "", string.punctuation))
+    wake_phrases = [prefix + word for prefix in WAKE_PREFIXES for word in WAKE_WORDS]
+    text = text.lower().strip()
+    text = text.translate(str.maketrans("", "", string.punctuation))
     for phrase in wake_phrases:
         similarity = difflib.SequenceMatcher(None, text, phrase).ratio()
         if similarity > 0.85 or phrase in text:
