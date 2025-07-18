@@ -6,6 +6,7 @@ webcam (line 226). Once you have both of those, you'll need to make a folder to 
 1. Cyn_AI.py (obviously)
 2. cyn_system_prompt.txt
 3. cyn_memory.json
-4. A picture/multiple pictures of faces you want to add to the FRS named something like Jacob.png or Abby.jpg
+4. config.json
+5. A picture/multiple pictures of faces you want to add to the FRS named something like Jacob.png or Abby.jpg
 
 Also, to change Cyn's personalized messages to any known people or other general stuff, use the config.json file.
