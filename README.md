@@ -19,3 +19,4 @@ Recognition System).
   - A picture/multiple pictures of faces you want to add to the FRS named something like Jacob.png or Abby.jpg
 
 ***Note: to change Cyn's personalized messages to any known people or other general stuff, use the config.json file.***
+***ALL FILES ARE NOT BY ME.***
